@@ -1,0 +1,39 @@
+/*CREATE DATABASE konfio_db;
+USE konfio_db;
+
+CREATE TABLE tabla_a(
+llave VARCHAR(1),
+valor_a int,
+PRIMARY KEY (llave)); 
+
+CREATE TABLE tabla_b(
+llave VARCHAR(1),
+valor_b int,
+PRIMARY KEY (llave)); 
+
+INSERT INTO tabla_a (llave, valor_a)
+VALUES ('A', 15), ('B',10), ('C',25),('D', 32), ('E', 10), ('F', 9), ('G',1);
+
+INSERT INTO tabla_b (llave, valor_b)
+VALUES ('B', 63), ('F',23), ('G',63),('H', 35), ('I', 57), ('J', 85), ('K',25);*/
+
+/* PREGUNTA A
+SELECT tabla_a.llave 
+FROM tabla_a
+INNER JOIN tabla_b
+ON tabla_a.llave = tabla_b.llave;*/
+
+
+/* PREGUNTA B
+SELECT tabla_a.llave
+FROM tabla_a
+LEFT OUTER JOIN tabla_b
+ON tabla_a.llave = tabla_b.llave
+WHERE tabla_b.llave IS null;*/
+
+/* PREGUNTA C
+SELECT tabla_b.llave
+FROM tabla_b
+LEFT OUTER JOIN tabla_a
+ON tabla_a.llave = tabla_b.llave
+WHERE tabla_a.llave IS null;*/
